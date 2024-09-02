@@ -7,23 +7,7 @@ from selenium import webdriver
 from selenium.webdriver.support.wait import WebDriverWait
 import time
 from seleniumpagefactory.Pagefactory import PageFactory
-
-# We will need to refactor this later on to a separate class 
-# For now, we just want to explore the PageFactory implementation
-class Homepage(PageFactory):
-    # It is necessary to to initialise driver as page class member to implement Page Factory
-    def __init__(self, driver):
-        self.driver = driver
-    
-    # define locators dictionary where key name will became WebElement using PageFactory
-    locators = {
-        'cookies_accept' : ('ID', 'onetrust-accept-btn-handler')
-    }
-    
-    # define locators dictionary where key name will became WebElement using PageFactory
-    def click_accept_cookies(self):
-        print("Homepage - click_accept_cookies()")
-        self.cookies_accept.click()
+from pages.homepage import Homepage
 
 # We will need to refactor this later on to a separate class 
 # For now, we just want to explore the PageFactory implementation        
@@ -54,7 +38,7 @@ class Main_navigation(PageFactory):
     
         
 # Move this later to another file once we have confirmed that it is working
-def test_pagefactory_implementation():
+def main():
     driver = webdriver.Chrome()
     try:
         driver.get('https://www.perthmint.com/')
@@ -73,4 +57,6 @@ def test_pagefactory_implementation():
         print('We finally want this driver to quit')
         driver.quit()
         
-test_pagefactory_implementation()
+if __name__ == "__main__":
+    print('This is invoked from main method of jd_pagefactory_example.py')
+    main()
