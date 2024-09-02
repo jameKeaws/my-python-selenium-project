@@ -8,7 +8,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
      
-class Main_navigation(PageFactory):
+class MainNavigation(PageFactory):
     # It is necessary to to initialise driver as page class member to implement Page Factory
     def __init__(self, driver):
         self.driver = driver
@@ -26,15 +26,15 @@ class Main_navigation(PageFactory):
     }
     
     def click_search_icon(self):
-        print("Navigation_main - click_search_icon()")
+        print("MainNavigation - click_search_icon()")
         self.search_icon.click()
         
     def click_search_text_field(self):
-        print("Navigation_main - click_search_text_field()")
+        print("MainNavigation - click_search_text_field()")
         self.search_text_field.click()
         
     def enter_text_on_search_text_field(self, item_to_search, wait_time_in_seconds):
-        print(f"Navigation_main - enter_text_on_search_text_field() - item_to_search: {item_to_search} , wait_time_in_seconds: {wait_time_in_seconds}")
+        print(f"MainNavigation - enter_text_on_search_text_field() - item_to_search: {item_to_search} , wait_time_in_seconds: {wait_time_in_seconds}")
         # This was the original implementation based on PageFactory, but we are implementing a bit different to see if it still works
         # self.search_text_field.set_text(item_to_search)
         
@@ -45,7 +45,7 @@ class Main_navigation(PageFactory):
         
     def click_search_bar_button(self, wait_time_in_seconds):
         '''Clicks on the Search button after we have entered item/product to search'''
-        print("Navigation_main - click_search_bar_button()")
+        print("MainNavigation - click_search_bar_button()")
         search_bar_button = WebDriverWait(self.driver, wait_time_in_seconds).until(
             EC.presence_of_element_located((By.CSS_SELECTOR, self.search_bar_button_css_selector))
         )
@@ -53,5 +53,5 @@ class Main_navigation(PageFactory):
         
     def close_search_bar(self):
         '''Closes the search bar usign the X button'''
-        print("Navigation_main - close_search_bar()")
+        print("MainNavigation - close_search_bar()")
         self.close_search_bar_icon.click()

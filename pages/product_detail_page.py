@@ -5,7 +5,7 @@
 
 from seleniumpagefactory.Pagefactory import PageFactory
 
-class HomePage(PageFactory):
+class ProductDetailPage(PageFactory):
     # It is necessary to to initialise driver as page class member to implement Page Factory
     def __init__(self, driver):
         self.driver = driver
@@ -17,5 +17,5 @@ class HomePage(PageFactory):
     
     # define locators dictionary where key name will became WebElement using PageFactory
     def click_accept_cookies(self):
-        print("HomePage - click_accept_cookies()")
+        print("Homepage - click_accept_cookies()")
         self.cookies_accept.click()
