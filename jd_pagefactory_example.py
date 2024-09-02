@@ -9,6 +9,8 @@ import time
 from seleniumpagefactory.Pagefactory import PageFactory
 from pages.homepage import Homepage
 from pages.main_navigation import Main_navigation
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support import expected_conditions as EC
 
 def main():
     driver = webdriver.Chrome()
@@ -19,16 +21,23 @@ def main():
         driver.maximize_window()
         wait_time = 3
         
+        # Upon load of Home page, click "OK" for the "Our site uses cookies" prompt
         homepage = Homepage(driver)
         homepage.click_accept_cookies()
         
         main_navigation = Main_navigation(driver)
+        # Click on the Search icon on the navigation bar <upper right hand side of the page>
         main_navigation.click_search_icon()
+        # Click on the Search text field
         main_navigation.click_search_text_field()
+        # Enter applicable item/product to search
         main_navigation.enter_text_on_search_text_field("James", wait_time)
         time.sleep(3)
+        # Click the Search button
         main_navigation.click_search_bar_button(wait_time)
         time.sleep(3)
+        
+        
     finally:
         print('We finally want this driver to quit')
         driver.quit()

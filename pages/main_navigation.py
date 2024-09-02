@@ -14,13 +14,15 @@ class Main_navigation(PageFactory):
         self.driver = driver
         self.search_text_field_css_selector = '#search-desktop > div > input'
         self.search_bar_button_css_selector = '#search-desktop > div > button.header__sub-nav-item.search-bar__search-button.px-3'
+        self.close_search_bar_icon_css_selector = '#search-desktop > div > button.header__sub-nav-item.search-bar__close-button.px-3.show-for-medium > svg'
     
     # define locators dictionary where key name will became WebElement using PageFactory   
     # A bit of trial and error in making the CSS locator work
     # Reference : https://thoughtcoders.com/blogs/page-object-model-in-python/#google_vignette
     locators = {
         'search_icon' : ('CSS', '.header__sub-nav-item.header__nav-item--search'),
-        'search_text_field' : ('CSS', '#search-desktop > div > input')
+        'search_text_field' : ('CSS', '#search-desktop > div > input'),
+        'close_search_bar_icon' : ('CSS', '#search-desktop > div > button.header__sub-nav-item.search-bar__close-button.px-3.show-for-medium > svg')
     }
     
     def click_search_icon(self):
@@ -42,8 +44,14 @@ class Main_navigation(PageFactory):
         search_text_field.send_keys(item_to_search)
         
     def click_search_bar_button(self, wait_time_in_seconds):
+        '''Clicks on the Search button after we have entered item/product to search'''
         print("Navigation_main - click_search_bar_button()")
         search_bar_button = WebDriverWait(self.driver, wait_time_in_seconds).until(
             EC.presence_of_element_located((By.CSS_SELECTOR, self.search_bar_button_css_selector))
         )
         search_bar_button.click()
+        
+    def close_search_bar(self):
+        '''Closes the search bar usign the X button'''
+        print("Navigation_main - close_search_bar()")
+        self.close_search_bar_icon.click()

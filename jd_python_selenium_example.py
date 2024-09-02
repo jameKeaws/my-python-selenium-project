@@ -34,7 +34,7 @@ def main():
         )
         cookies_ok_button.click()
         
-        # On the perthmint.com home page, click on 
+        # On the perthmint.com home page, click on the search icon on the upper right hand side of the page
         search_icon = driver.find_element(By.CSS_SELECTOR, '.header__sub-nav-item.header__nav-item--search')
         search_icon.click()
         
