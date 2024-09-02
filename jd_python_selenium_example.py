@@ -18,6 +18,7 @@ def main():
     search_bar_button_css_selector ='#search-desktop > div > button.header__sub-nav-item.search-bar__search-button.px-3'
     target_product_url = 'https://www.perthmint.com/shop/collector-coins/coins/james-bond-legacy-series-5th-issue-2024-1oz-silver-proof-coloured-coin/'
     target_product_image_url = 'https://www.perthmint.com/globalassets/assets/product-images-e-com-pages/coins/24s84aaa/01-legacy-series-5th-issue-2024-1oz-silver-proof-coloured-coin-onedge-highres.jpg?width=200&format=webp'
+    cookies_button_ok_id =  'onetrust-accept-btn-handler'
     
     driver = webdriver.Chrome()
 
@@ -27,9 +28,16 @@ def main():
         time.sleep(5)
         driver.maximize_window()
         
+        # On the perthmint.com home page, click "OK" for the "Our site uses cookies" prompt
+        cookies_ok_button = WebDriverWait(driver, 5).until(
+            EC.presence_of_element_located((By.ID, cookies_button_ok_id))
+        )
+        cookies_ok_button.click()
+        
         # On the perthmint.com home page, click on 
-        search_iconx = driver.find_element(By.CSS_SELECTOR, '.header__sub-nav-item.header__nav-item--search')
-        search_iconx.click()
+        search_icon = driver.find_element(By.CSS_SELECTOR, '.header__sub-nav-item.header__nav-item--search')
+        search_icon.click()
+        
         search_text_field = WebDriverWait(driver, 10).until(
             EC.presence_of_element_located((By.CSS_SELECTOR, search_text_field_css_selector))
         )
