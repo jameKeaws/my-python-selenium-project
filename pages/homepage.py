@@ -1,7 +1,10 @@
+#* References
+# https://selenium-page-factory.readthedocs.io/en/latest/
+# https://www.browserstack.com/guide/page-object-model-in-selenium-python
+# https://thoughtcoders.com/blogs/page-object-model-in-python/#google_vignette
+
 from seleniumpagefactory.Pagefactory import PageFactory
 
-# We will need to refactor this later on to a separate class 
-# For now, we just want to explore the PageFactory implementation
 class Homepage(PageFactory):
     # It is necessary to to initialise driver as page class member to implement Page Factory
     def __init__(self, driver):
