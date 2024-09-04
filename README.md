@@ -1,6 +1,6 @@
 #### Exploring automation using Python with Selenium
 
-This is a simple project for exploring Python + Selenium Automation Testing (with a little exploration into Behave testing framework)
+This is a simple demo project for exploring Python + Selenium Automation Testing (with a little exploration into Behave testing framework).  The project folder structure and packaging is pretty rough I would say, and not yet following best practices.  But if you just need a base code to get a quick demo on how Python with Selenium works, this project should work for you.  You will need to download Python, Visual Studio Code, other python related libraries, and selenium web drivers.
 
 I have elected to use "The Perth Mint" website as the site for testing.
 As of current time, we are only testing one feature which is searching for a product from the home page.
