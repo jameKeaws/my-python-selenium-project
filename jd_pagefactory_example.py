@@ -49,7 +49,7 @@ def main():
         target_product_card_url = 'https://www.perthmint.com/shop/collector-coins/coins/james-bond-skyfall-2022-1-2oz-silver-proof-coloured-coin/'
         target_sku = '22J15AAA'
         product_card = ProductCard(driver, target_product_card_url, target_sku)
-        product_card.find_target_product_card_sku_element()
+        # product_card.find_target_product_card_sku_element()
         product_card.click_target_product_card_url()
         time.sleep(5)
         
