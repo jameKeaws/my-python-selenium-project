@@ -1,4 +1,4 @@
-#### Exploring automation using Python with Selenium
+## Exploring automation using Python with Selenium
 
 This is a simple demo project for exploring Python + Selenium Automation Testing (with a little exploration into Behave testing framework).  The project folder structure and packaging is pretty rough I would say, and not yet following best practices.  But if you just need a base code to get a quick demo on how Python with Selenium works, this project should work for you.  You will need to download Python, Visual Studio Code, other python related libraries, and selenium web drivers.
 
@@ -6,7 +6,7 @@ I have elected to use "The Perth Mint" website as the site for testing.
 As of current time, we are only testing one feature which is searching for a product from the home page.
 The testing will not require log-in so as other users of this project could also try out running the code.
 
-#### PREREQUISITES
+### PREREQUISITES
 1) Install Python
     https://www.python.org/downloads/
     You will also need to set Python in your system environment variables > Path
@@ -26,21 +26,23 @@ The testing will not require log-in so as other users of this project could also
     pip install behave
         NOTE : For Behave exploration, I installed "Cucumber (Gherkin) Full Support". No other extensions were installed
 
-#### HOW TO RUN
-A) Exploring Python with Selenium only
-    You could focus on stand alone file jd_python_selenium_example.py
+### HOW TO RUN
+### A) Exploring Python with Selenium only
+    You could focus on stand alone file jd_python_selenium_example.py \n
+    Open Terminal \n
+    Then type in: python jd_python_selenium_example.py \n
+### B) Exploring Python with Selenium (implementing Page Factory)
+    You could focus on the pages folder and its contents +     jd_pagefactory_outside_test_folder.py
     Open Terminal
-    Then type in: python jd_python_selenium_example.py
-B) Exploring Python with Selenium (implementing Page Factory)
-    You could focus on the pages folder and its contents + jd_pagefactory_example.py
-    Open Terminal
-    Then type in: python jd_pagefactory_example.py 
-C) Exploring Python with Selenium (implementing Behave)
+    Then type in: python jd_pagefactory_outside_test_folder.py
+
+    
+### C) Exploring Python with Selenium (implementing Behave)
     You could focus on the features folder and its contents
     Open Terminal
     Then type in: behave features\product_search.feature
 
-#### REFERENCES
+### REFERENCES
 BDD feature file writing :
     https://automationpanda.com/2017/01/30/bdd-101-writing-good-gherkin/
 
