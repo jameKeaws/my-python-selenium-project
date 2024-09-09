@@ -4,20 +4,24 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 import time
+from pages.homepage import HomePage
 
+# We need to convert this later to a PageFactory version, yeah later, let us explore Behave first
 @given("a Google Chrome browser is at The Perth Mint home page : '{site_home_page}'")
 def open_website(context, site_home_page):
-    cookies_button_ok_id = 'onetrust-accept-btn-handler'
     context.driver = webdriver.Chrome()
     context.driver.get(site_home_page)
     time.sleep(5)
     context.driver.maximize_window()
-    
     # On the perthmint.com home page, click "OK" for the "Our site uses cookies" prompt
-    cookies_ok_button = WebDriverWait(context.driver, 5).until(
-        EC.presence_of_element_located((By.ID, cookies_button_ok_id))
-    )
-    cookies_ok_button.click()
+    homepage = HomePage(context.driver)
+    homepage.click_accept_cookies()
+    # Temporarily disable code below and enable PageFactory object implementation
+    # cookies_button_ok_id = 'onetrust-accept-btn-handler'
+    # cookies_ok_button = WebDriverWait(context.driver, 5).until(
+    #     EC.presence_of_element_located((By.ID, cookies_button_ok_id))
+    # )
+    # cookies_ok_button.click()
     
 # value_to_search value is coming from product_search.feature
 @when("the user enters '{value_to_search}' into the search bar")
