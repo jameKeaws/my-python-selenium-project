@@ -28,15 +28,17 @@ The testing will not require log-in so as other users of this project could also
 
 ### HOW TO RUN
 ### A) Exploring Python with Selenium only
-    You could focus on stand alone file jd_python_selenium_example.py \n
-    Open Terminal \n
-    Then type in: python jd_python_selenium_example.py \n
+    You could focus on stand alone file jd_python_selenium_example.py
+    Open Terminal
+    Then type in: python jd_python_selenium_example.py
 ### B) Exploring Python with Selenium (implementing Page Factory)
-    You could focus on the pages folder and its contents +     jd_pagefactory_outside_test_folder.py
+    You could focus on the "pages" folder and its contents & jd_pagefactory_outside_test_folder.py
     Open Terminal
     Then type in: python jd_pagefactory_outside_test_folder.py
 
-    
+    There is also an option to use the jd_pagefactory_example.py under "test" folder
+    You will need to be under the test folder > Open Terminal
+    Then type in: python -m jd_pagefactory_example
 ### C) Exploring Python with Selenium (implementing Behave)
     You could focus on the features folder and its contents
     Open Terminal
