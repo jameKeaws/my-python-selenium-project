@@ -63,8 +63,8 @@ def main():
         # We probably need to create a DataObject Factory of some kind wherein we could create data object 
         # based on search value or some kind of logic
         # James Bond Legacy Series - 5th Issue 2024 1oz Silver Proof Coloured Coin
-        target_product_card_url = 'https://www.perthmint.com/shop/collector-coins/coins/james-bond-legacy-series-5th-issue-2024-1oz-silver-proof-coloured-coin/'
-        target_sku = '24S84AAA'
+        # target_product_card_url = 'https://www.perthmint.com/shop/collector-coins/coins/james-bond-legacy-series-5th-issue-2024-1oz-silver-proof-coloured-coin/'
+        # target_sku = '24S84AAA'
         
         # James Bond Skyfall 2022 1/2oz Silver Proof Coloured Coin
         target_product_card_url = 'https://www.perthmint.com/shop/collector-coins/coins/james-bond-skyfall-2022-1-2oz-silver-proof-coloured-coin/'

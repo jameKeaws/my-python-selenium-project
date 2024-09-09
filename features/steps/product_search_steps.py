@@ -5,11 +5,11 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support import expected_conditions as EC
 import time
 
-@given('a Google Chrome browser is at The Perth Mint home page')
-def open_website(context):
+@given("a Google Chrome browser is at The Perth Mint home page : '{site_home_page}'")
+def open_website(context, site_home_page):
     cookies_button_ok_id = 'onetrust-accept-btn-handler'
     context.driver = webdriver.Chrome()
-    context.driver.get('https://www.perthmint.com/')
+    context.driver.get(site_home_page)
     time.sleep(5)
     context.driver.maximize_window()
     
@@ -19,10 +19,9 @@ def open_website(context):
     )
     cookies_ok_button.click()
     
-
-@when('the user enters "James" into the search bar')
-def search_product(context):
-    value_to_search = 'James'
+# value_to_search value is coming from product_search.feature
+@when("the user enters '{value_to_search}' into the search bar")
+def search_product(context, value_to_search):
     search_text_field_css_selector = '#search-desktop > div > input'
     # On the perthmint.com home page, click on the search icon on the upper right hand side of the page
     search_icon = context.driver.find_element(By.CSS_SELECTOR, '.header__sub-nav-item.header__nav-item--search')
@@ -35,7 +34,7 @@ def search_product(context):
     time.sleep(5)
         
 
-@then('product cards related to "James" are shown on the search results page')
-def verify_search_result(context):
+@then("product cards related to '{value_to_search}' are shown on the search results page")
+def verify_search_result(context, value_to_search):
     # We just closed the driver here as we are just testing if the Behave Framework could be run
     context.driver.quit()

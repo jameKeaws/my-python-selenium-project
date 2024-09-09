@@ -54,8 +54,18 @@ Behave :
 Behave Youtube Tutorial:
     https://www.youtube.com/watch?v=JIyvAFBx2Fw&list=PLUDwpEzHYYLsARXz1o3Ldt1FnvRbvlxsS&index=2
 
-TO BE EXPLORED - NOT APPLIED ON CURRENT PROJECT : Additional setup for Visual Studio Code and Behave 
-    https://stackoverflow.com/questions/52725150/how-to-debug-behave-bdd-scenario-using-python-debugger-and-visual-studio-code
+    https://www.youtube.com/watch?v=t8T5LWIO24I
 
+Passing Parameters in Behave:
+    https://www.way2automation.com/passing-parameters-to-steps-in-behave/
+
+    https://www.techlistic.com/2023/05/python-behave-tutorial.html
+
+TO BE EXPLORED - NOT APPLIED ON CURRENT PROJECT : Additional setup for Visual Studio Code and Behave 
     https://spurqlabs.com/using-visual-studio-code-for-behave-bdd-tests-in-python/
+
+Visual Studio Code - Behave : launch.json Configuration for debugging
+    https://code.visualstudio.com/docs/python/debugging
+
+    https://stackoverflow.com/questions/52725150/how-to-debug-behave-bdd-scenario-using-python-debugger-and-visual-studio-code <We have applied this launch.json configuration for our debugging - Works>
     
