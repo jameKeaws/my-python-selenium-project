@@ -68,4 +68,8 @@ Visual Studio Code - Behave : launch.json Configuration for debugging
     https://code.visualstudio.com/docs/python/debugging
 
     https://stackoverflow.com/questions/52725150/how-to-debug-behave-bdd-scenario-using-python-debugger-and-visual-studio-code <We have applied this launch.json configuration for our debugging - Works>
+
+###HOW TO DEBUG THE product_search.feature
+    1) Ensure that you have configured applicable launch.json, you could refer to what is in the existing project
+    2) Look for the ... in the navigation window of Visual Studio Code, look for Run > Start Debugging (F5)
     

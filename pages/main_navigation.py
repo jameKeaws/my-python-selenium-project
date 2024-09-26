@@ -19,6 +19,9 @@ class MainNavigation(PageFactory):
     # define locators dictionary where key name will became WebElement using PageFactory   
     # A bit of trial and error in making the CSS locator work
     # Reference : https://thoughtcoders.com/blogs/page-object-model-in-python/#google_vignette
+    # We might be able to use XPath but we need to explore it more
+    # For example search_icon //*[@id="search-desktop"]/div/button[1]
+    # search_text_field //*[@id="search-desktop"]/div/input
     locators = {
         'search_icon' : ('CSS', '.header__sub-nav-item.header__nav-item--search'),
         'search_text_field' : ('CSS', '#search-desktop > div > input'),
